@@ -7,12 +7,13 @@
 :root {
     --ff: "Raleway", sans-serif;
 
+    /* fonts */
     --title-lg: bold 3rem var(--ff);
     --title-md: bold 2.5rem var(--ff);
     --title-sm: bold 2rem var(--ff);
     --title-xs: bold 1rem var(--ff);
 
-    --subtitle: medium 2rem/2 var(--ff);
+    --subtitle: 500 2rem/2 var(--ff);
 
     --body-lg: normal 1.25rem/1.4 var(--ff);
     --body-md: normal 1rem/1.4 var(--ff);
@@ -20,9 +21,10 @@
     --body-xs: normal .75rem/1.4 var(--ff);
 
     --button: bold .875rem var(--ff);
-    --link: medium .875rem var(--ff);
+    --link: 500 .875rem var(--ff);
     --tag: bold .625rem var(--ff);
 
+    /* color */
     --pink-light: #C59DD2;
     --pink-base: #9547A5;
     --pink-dark: #7D298A;
@@ -49,6 +51,7 @@ body {
     height: 100vh;
 
     max-width: 90rem;
+    margin-inline: auto;
 
     background-color: var(--shape-background);
 }
@@ -76,17 +79,37 @@ p {
 strong {
     font: var(--subtitle);
     color: var(--blue-light);
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
 }
 
 .button {
     background-color: var(--pink-dark);
-    width: auto;
     height: 2.5rem;
     border-radius: .5rem;
 
     font: var(--button);
+    color: var(--text-title);
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: filter 500ms;
+    &:hover {
+        filter: brightness(1.2);
+    }
+}
+
+.blur {
+    position: absolute;
+    background-color: var(--pink-low);
+
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+
+    z-index: -1;
 }
