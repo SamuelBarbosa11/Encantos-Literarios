@@ -1,0 +1,137 @@
+.kit-mensal {
+    & h2, & p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    & h2 {
+        margin-top: 24.7rem;
+    }
+
+    & .book {
+        width: 54.8rem;
+        height: 51rem;
+        margin-inline: auto;
+        margin-block: 5.5rem 17.9rem;
+
+        position: relative;
+        & * {
+            position: absolute;
+            top: 15%;
+            left: 30%;
+        }
+
+        & img {
+            &[src*="book.png"] {
+                width: 29.1875rem;
+                height: 38.5625rem;
+                top: 12%;
+                left: 20%;
+                z-index: 1;
+            }
+
+            &[src*="bookmark"] {
+                width: 10.75rem;
+                height: 33.5rem;
+                left: 50%;
+                z-index: -1;
+            }
+
+            &[src*="pin"] {
+                width: 13.875rem;
+                height: 15.875rem;
+                top: 60%;
+                z-index: -1;
+            }
+
+            &[src*="arrow-1"] {
+                width: 10.9rem;
+                height: 1.875rem;
+                z-index: -1;
+            }
+
+            &[src*="arrow-2"] {
+                width: 6.55rem;
+                height: 7.9rem;
+                top: 60%;
+                z-index: -1;
+            }
+
+            &[src*="arrow-3"] {
+                width: 9rem;
+                height: 9.47rem;
+                top: 50%;
+                z-index: -1;
+            }
+        }
+
+        & span {
+            width: 11rem;
+
+            &:nth-child(4) {
+                top: 60%;
+            }
+
+            &:nth-child(10) {
+                width: 12rem;
+                top: 70%;
+                left: 50%;
+            }
+        }
+
+        & .blur {
+            width: 58.125rem;
+            height: 58.125rem;
+            filter: blur(37.5rem);
+            top: 0;
+            left: 0;
+        }
+
+        & img, & span {
+            transition: transform 0.5s ease-in-out;
+        }
+
+        &:hover {
+            & img {
+                &[src*="arrow-1."] {
+                    transform: translate(-110%, -140%);
+                }
+
+                &[src*="arrow-2."] {
+                    transform: translate(-230%, -50%);
+                }
+
+                &[src*="pin."] {
+                    transform: translate(-90%, 10%) rotate(-8deg);
+                }
+
+                &[src*="bookmark-yellow"] {
+                transform: translate(90%, -20%) rotate(12deg);
+                }
+
+                &[src*="bookmark-purple"] {
+                    transform: translate(150%, 5%) rotate(22deg);
+                }
+
+                &[src*="arrow-3."] {
+                    transform: translate(280%, 160%);
+                }
+            }
+            & span {
+                &:nth-child(2) {
+                    transform: translate(-150%, -350%);
+                }
+
+                &:nth-child(4) {
+                    transform: translate(-150%, -450%);
+                }
+
+                &:nth-child(10) {
+                    transform: translate(80%, 1100%);
+                }
+            }
+        }
+    }
+}

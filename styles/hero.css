@@ -60,6 +60,7 @@
             & span {
                 filter: brightness(0.5);
                 transition: filter 0.5s ease;
+                font: inherit;
 
                 & strong {
                     color: var(--text-body);
@@ -153,7 +154,7 @@
         &#ellipse1 {
             width: 33.625rem;
             height: 33.625rem;
-            filter: blur(868px);
+            filter: blur(54.25rem);
 
             bottom: 0;
             left: 14.5rem;
@@ -162,7 +163,7 @@
         &#ellipse2 {
             width: 15rem;
             height: 15rem;
-            filter: blur(468px);
+            filter: blur(29.25rem);
     
             top: 22.875rem;
             right: -5%;
@@ -171,7 +172,7 @@
         &#ellipse3 {
             width: 23.5rem;
             height: 23.5rem;
-            filter: blur(508px);
+            filter: blur(31.75rem);
     
             top: 30.875rem;
             left: -15%;
@@ -180,7 +181,7 @@
         &#ellipse4 {
             width: 30.6rem;
             height: 30.6rem;
-            filter: blur(668px);
+            filter: blur(41.75rem);
     
             bottom: 19.5rem;
             right: -15%;

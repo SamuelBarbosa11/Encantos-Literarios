@@ -76,6 +76,11 @@ p {
     color: var(--text-body);
 }
 
+span {
+    font: var(--body-md);
+    color: var(--text-title);
+}
+
 strong {
     font: var(--subtitle);
     color: var(--blue-light);
