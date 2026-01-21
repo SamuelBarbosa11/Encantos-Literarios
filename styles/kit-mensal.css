@@ -36,34 +36,34 @@
                 width: 10.75rem;
                 height: 33.5rem;
                 left: 50%;
-                z-index: -1;
+                z-index: 0;
             }
 
             &[src*="pin"] {
                 width: 13.875rem;
                 height: 15.875rem;
                 top: 60%;
-                z-index: -1;
+                z-index: 0;
             }
 
             &[src*="arrow-1"] {
                 width: 10.9rem;
                 height: 1.875rem;
-                z-index: -1;
+                z-index: 0;
             }
 
             &[src*="arrow-2"] {
                 width: 6.55rem;
                 height: 7.9rem;
                 top: 60%;
-                z-index: -1;
+                z-index: 0;
             }
 
             &[src*="arrow-3"] {
                 width: 9rem;
                 height: 9.47rem;
                 top: 50%;
-                z-index: -1;
+                z-index: 0;
             }
         }
 
@@ -85,7 +85,7 @@
             width: 58.125rem;
             height: 58.125rem;
             filter: blur(37.5rem);
-            top: 0;
+            top: -10%;
             left: 0;
         }
 
@@ -108,7 +108,7 @@
                 }
 
                 &[src*="bookmark-yellow"] {
-                transform: translate(90%, -20%) rotate(12deg);
+                    transform: translate(90%, -20%) rotate(12deg);
                 }
 
                 &[src*="bookmark-purple"] {

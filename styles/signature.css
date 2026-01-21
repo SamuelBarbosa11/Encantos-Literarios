@@ -1,0 +1,197 @@
+.signature {
+    background-image: url(../assets/images/pricing-background.png);
+    position: relative;
+
+    & h2 {
+        margin-block: 12.125rem 3.5rem;
+        text-align: center;
+    }
+
+    & .plans {
+        width: 65.625rem;
+        height: 37.875rem;
+        margin-inline: auto;
+        margin-bottom: 18.875rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+
+        & .plan {
+            width: 18rem;
+            height: 26rem;
+            background-color: var(--shape-base);
+            border-radius: 1.5rem;
+            border: 1px solid var(--shape-stroke);
+            
+            padding: 2rem 2rem 1.75rem;
+    
+            & .pricing {
+                margin-top: 1.5rem;
+    
+                & span {
+                    font: var(--title-xs);
+                }
+    
+                & small {
+                    margin-top: .5rem;
+                }
+            }
+    
+            & ul {
+                display: grid;
+                gap: 0.75rem;
+                margin-bottom: 1.5rem;
+            }
+    
+            position: relative;
+            &#semi-annual {
+                z-index: 1;
+
+                & img {
+                    position: absolute;
+                    top: -12%;
+                    left: 12%;
+                    z-index: -1;
+                }
+    
+                & h4 {
+                    color: var(--pink-light);
+                }
+
+                & li::before {
+                    background-image: url(../assets/icons/star.svg);
+                }
+
+                & .pricing {
+                    margin-bottom:  4.375rem;
+                }
+
+                &:hover {
+                    transform: translateY(-5%);
+                }
+            }
+    
+            &#monthly, &#annual {
+                position: absolute;
+                z-index: -1;
+                transition: transform 0.5s ease-in-out;
+
+                & img:nth-child(1), & img:nth-child(2) {
+                    position: absolute;
+                    transform: scale(3);
+                    transition: transform 0.5s ease-in-out;
+                }
+
+                & .button {
+                    background-color: var(--blue-dark);
+                }
+            }
+
+            &#monthly {
+                & img:nth-child(1) {
+                    width: 1.625rem;
+                    height: 1.625rem;
+
+                    top: -6%;
+                    left: -15%;
+                }
+
+                & img:nth-child(2) {
+                    width: 0.8125rem;
+                    height: 0.8125rem;
+
+                    top: 3%;
+                    left: -20%;
+                }
+
+                & .pricing {
+                    margin-bottom: 4.18rem;
+                }
+
+                &:hover {
+                    & img:nth-child(1) {
+                        transform: scale(3) rotate(-20deg);
+                    }
+
+                    & img:nth-child(2) {
+                        transform: scale(3) rotate(13deg);
+                    }
+
+                    transform: rotate(-8deg) translate(-100%, -5%) !important;
+                }
+            }
+
+            &#annual {
+                & img:nth-child(1) {
+                    width: 1.44rem;
+                    height: 1.44rem;
+
+                    bottom: -10%;
+                    right: -15%;
+                }
+
+                & img:nth-child(2) {
+                    width: 0.7rem;
+                    height: 0.7rem;
+
+                    bottom: -10%;
+                    right: 2%;
+                }
+
+                & .pricing {
+                    margin-bottom: 0.59rem;
+                }
+
+                &:hover {
+                    & img:nth-child(1) {
+                        transform: scale(3) rotate(13deg);
+                    }
+
+                    & img:nth-child(2) {
+                        transform: scale(3) rotate(-28deg);
+                    }
+
+                    transform: rotate(8deg) translate(100%, -5%) !important;
+                }
+            }
+    
+            transition: transform 0.5s ease-in-out;
+            &:hover {
+                background-color: var(--shape-hover);
+                box-shadow:
+                    0 0 30px rgba(70, 140, 255, 0.18),
+                    0 0 80px rgba(70, 140, 255, 0.12),
+                    0 40px 80px rgba(0, 0, 0, 0.55);
+            }
+            
+        }
+
+        &:hover {
+            & .plan#monthly, .plan#annual {
+                z-index: 0;
+            }
+
+            & .plan#monthly {
+                transform: rotate(-8deg) translate(-100%, 0%);
+            }
+    
+            & .plan#annual {
+                transform: rotate(8deg) translate(100%, 0%);
+            }
+        }
+    }
+
+
+    & .blur {
+        width: 59rem;
+        height: 59rem;
+        filter: blur(35.5rem);
+        background-color: var(--shape-base);
+
+        top: 0;
+        left: 15%;
+    }
+}
