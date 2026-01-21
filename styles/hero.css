@@ -79,6 +79,7 @@
             z-index: 2;
 
             transform: scale(0);
+            transition: transform .5s ease-in-out;
 
             &[src*="book-icon"] {
                 top: 1rem;
@@ -135,15 +136,17 @@
 
             & img {
                 &[src*="book-icon"] {
-                    animation: img-appear 0.5s ease-in-out both;
+                    transform: scale(1);
                 }
     
                 &[src*="planchette"] {
-                    animation: img-appear 0.5s 0.5s ease-in-out both;
+                    transform: scale(1);
+                    transition-delay: .5s;
                 }
     
                 &[src*="crystal-ball"] {
-                    animation: img-appear 0.5s 1s ease-in-out both;
+                    transform: scale(1);
+                    transition-delay: 1s;
                 }
             }
         }
@@ -195,19 +198,5 @@
 @keyframes appear {
     from {
         opacity: 0;
-    }
-}
-
-@keyframes img-appear {
-    0% {
-        transform: scale(0);
-    }
-
-    70% {
-        transform: scale(1.2);
-    }
-
-    100% {
-        transform: scale(1);
     }
 }
