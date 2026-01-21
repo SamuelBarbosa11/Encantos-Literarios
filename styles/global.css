@@ -101,6 +101,8 @@ small {
 
 a {
     text-decoration: none;
+    font: var(--link);
+    color: var(--blue-light);
 }
 
 li {
