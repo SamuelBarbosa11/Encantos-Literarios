@@ -80,6 +80,7 @@ footer {
 
         & .social-network {
             margin-right: none;
+            margin-inline: auto;
 
             & > img {
                 width: 9.875rem;
