@@ -54,6 +54,22 @@ body {
     margin-inline: auto;
 
     background-color: var(--shape-background);
+
+    &::before {
+        content: "";
+        background: url(../assets/images/hero-background.png) no-repeat center top / cover;
+        position: absolute;
+        inset: 0;
+        max-height: 59.25rem;
+        margin-inline: auto;
+
+        animation: appear 3s backwards;
+    }
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -172,4 +188,19 @@ tag {
 price {
     font: var(--title-md);
     color: var(--text-title);
+}
+
+@media (width < 80em) {
+    body::before {
+        max-height: 29rem;
+        max-width: 59.25rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+    }
 }
