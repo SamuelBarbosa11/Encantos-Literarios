@@ -190,6 +190,12 @@ price {
     color: var(--text-title);
 }
 
+.divider {
+    height: 1px;
+    background-color: var(--shape-stroke);
+    margin-block: .75rem;
+}
+
 @media (width < 80em) {
     body::before {
         max-height: 29rem;
