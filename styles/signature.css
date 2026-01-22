@@ -66,7 +66,7 @@
                 }
 
                 & .pricing {
-                    margin-bottom:  4.375rem;
+                    margin-bottom: 4.375rem;
                 }
 
                 &:hover {
@@ -76,7 +76,6 @@
     
             &#monthly, &#annual {
                 position: absolute;
-                z-index: -1;
                 transition: transform 0.5s ease-in-out;
 
                 & img:nth-child(1), & img:nth-child(2) {
@@ -170,10 +169,6 @@
         }
 
         &:hover {
-            & .plan#monthly, .plan#annual {
-                z-index: 0;
-            }
-
             & .plan#monthly {
                 transform: rotate(-8deg) translate(-100%, 0%);
             }
@@ -193,5 +188,70 @@
 
         top: 0;
         left: 15%;
+    }
+}
+
+@media (width < 80em) {
+    .signature {
+        & h2 {
+            margin-block: 6.5rem 3rem;
+            font-size: 1.5rem;
+        }
+
+        & .plans {
+            overflow-x: auto;
+            overflow-y: hidden;
+            justify-content: flex-start;
+            margin-bottom: 6.5rem;
+
+            width: auto;
+            height: auto;
+
+            gap: 1rem;
+
+            & .plan {
+                min-width: 17rem;
+                height: 25rem;
+
+                & img[src*=star], & img[src*=Bunny] {
+                    display: none;
+                }
+
+                &#monthly, &#annual {
+                    position: relative;
+                }
+
+                &#monthly {
+                    margin-left: 1rem;
+                    & .pricing {
+                        margin-bottom: 3.5rem;
+                    }
+                }
+
+                &#semi-annual {
+                    & .pricing {
+                        margin-bottom: 1.8rem;
+                    }
+                }
+
+                &#annual {
+                    & .pricing {
+                        margin-bottom: 0;
+                    }
+                }
+
+                &:hover {
+                    background-color: var(--shape-base);
+                    box-shadow: none;
+                    transform: none !important;
+                }
+            }
+
+            &:hover {
+                & .plan#monthly, & .plan#annual {
+                    transform: none !important;
+                }
+            }
+        }
     }
 }
