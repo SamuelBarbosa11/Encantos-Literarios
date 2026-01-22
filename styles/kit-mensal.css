@@ -7,7 +7,18 @@
     }
 
     & h2 {
-        margin-top: 24.7rem;
+        margin-block: 19.7rem .375rem;
+        gap: 1rem;
+
+        & img {
+            width: 2rem;
+            height: 2rem;
+            transform: scale(2);
+        }
+    }
+
+    & p {
+        font: var(--body-md);
     }
 
     & .book {
@@ -28,7 +39,7 @@
                 width: 29.1875rem;
                 height: 38.5625rem;
                 top: 12%;
-                left: 20%;
+                left: 22%;
                 z-index: 1;
             }
 
@@ -36,34 +47,29 @@
                 width: 10.75rem;
                 height: 33.5rem;
                 left: 50%;
-                z-index: 0;
             }
 
             &[src*="pin"] {
                 width: 13.875rem;
                 height: 15.875rem;
                 top: 60%;
-                z-index: 0;
             }
 
             &[src*="arrow-1"] {
                 width: 10.9rem;
                 height: 1.875rem;
-                z-index: 0;
             }
 
             &[src*="arrow-2"] {
                 width: 6.55rem;
                 height: 7.9rem;
                 top: 60%;
-                z-index: 0;
             }
 
             &[src*="arrow-3"] {
                 width: 9rem;
                 height: 9.47rem;
                 top: 50%;
-                z-index: 0;
             }
         }
 
@@ -132,6 +138,120 @@
                     transform: translate(80%, 1100%);
                 }
             }
+        }
+    }
+}
+
+@media (width < 80em) {
+    .kit-mensal {
+        & h2 {
+            margin-block: 6.5rem .5rem;
+            font-size: 1.5rem;
+            gap: .75rem;
+
+            & img {
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+        }
+
+        & p {
+            font-size: .875rem;
+        }
+
+        & .book {
+            width: 23.4375rem;
+            height: 19.9375rem;
+            margin-block: 4rem 5.5rem;
+
+            & img {
+                &[src*="book.png"] {
+                    width: 9.8125rem;
+                    height: 12.9375rem;
+                    top: 12%;
+                    left: 28%;
+                    z-index: 2;
+                }
+
+                &[src*="bookmark"] {
+                    width: 3.625rem;
+                    height: 11.25rem;
+                    left: auto;
+                }
+
+                &[src*="bookmark-yellow"] {
+                    transform: rotate(12deg);
+                    right: 20%;
+                    top: 9%;
+                    z-index: 1;
+                }
+
+                &[src*="bookmark-purple"] {
+                    transform: rotate(22deg);
+                    right: 11%;
+                    top: 18%;
+                }
+
+                &[src*="pin"] {
+                    width: 4.68rem;
+                    height: 5.3375rem;
+                    top: 60%;
+                    left: 15%;
+                    transform: rotate(-8deg);
+                }
+
+                &[src*="arrow-1"] {
+                    width: 3.67rem;
+                    height: .625rem;
+                    top: 10%;
+                    left: 16%;
+                }
+
+                &[src*="arrow-2"] {
+                    width: 2.2rem;
+                    height: 2.67rem;
+                    top: 51%;
+                    left: 11%;
+                }
+
+                &[src*="arrow-3"] {
+                    width: 3.1rem;
+                    height: 3.1875rem;
+                    top: 70%;
+                    left: auto;
+                    right: 15%;
+                }
+            }
+
+            & span {
+                width: 6.9375rem;
+                font: normal .625rem var(--ff);
+
+                &:nth-child(2) {
+                    top: 4%;
+                    left: 3%;
+                }
+
+                &:nth-child(4) {
+                    top: 45%;
+                    left: 5%;
+                }
+
+                &:nth-child(10) {
+                    top: 88%;
+                    left: 58%;
+                }
+            }
+
+            & .blur {
+                width: 18.625rem;
+                height: 18.625rem;
+                filter: blur(12.9rem);
+                top: 1%;
+                left: 5%;
+            }
+
+            pointer-events: none; /* no-hover */
         }
     }
 }
