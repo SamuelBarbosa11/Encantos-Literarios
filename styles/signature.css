@@ -198,60 +198,73 @@
             font-size: 1.5rem;
         }
 
+    }
+}
+
+@media (width < 65.625rem) {
+    .signature {
         & .plans {
             overflow-x: auto;
             overflow-y: hidden;
-            justify-content: flex-start;
+            justify-content: center;
             margin-bottom: 6.5rem;
-
+    
             width: auto;
             height: auto;
-
+    
             gap: 1rem;
-
+    
             & .plan {
                 min-width: 17rem;
                 height: 25rem;
-
+    
                 & img[src*=star], & img[src*=Bunny] {
                     display: none;
                 }
-
+    
                 &#monthly, &#annual {
                     position: relative;
                 }
-
+    
                 &#monthly {
                     margin-left: 1rem;
                     & .pricing {
                         margin-bottom: 3.5rem;
                     }
                 }
-
+    
                 &#semi-annual {
                     & .pricing {
                         margin-bottom: 1.8rem;
                     }
                 }
-
+    
                 &#annual {
                     & .pricing {
                         margin-bottom: 0;
                     }
                 }
-
+    
                 &:hover {
                     background-color: var(--shape-base);
                     box-shadow: none;
                     transform: none !important;
                 }
             }
-
+    
             &:hover {
                 & .plan#monthly, & .plan#annual {
                     transform: none !important;
                 }
             }
+        }
+    }
+}
+
+@media (width < 54rem) {
+    .signature {
+        & .plans {
+            justify-content: flex-start;
         }
     }
 }
